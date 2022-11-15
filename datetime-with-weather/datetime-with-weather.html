@@ -72,7 +72,7 @@
             position: absolute;
             bottom: 5px;
             left: 5px;
-            color: #ccc;
+            color: black;
             font-size:18px;
         }
 
@@ -135,7 +135,7 @@
             .then(res => res.json())
             .then(data => {
 
-                const skycons = new Skycons({ color: "#fff" });
+                const skycons = new Skycons({ color: "#000" });
 
                 if (!(data && data.success)) {
                     if (data.stat_message) message.textContent = data.stat_message;
