@@ -14,7 +14,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
+#credit {
+  left: 95%;
+  color: white;
+  position: absolute;
+  bottom: 5px;
+}
 .countdownContainer {
   position: absolute;
   top: 50%;
