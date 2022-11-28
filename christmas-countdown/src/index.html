@@ -1,8 +1,8 @@
-
-/<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Count Down To Christmas Timer</title>
@@ -26,6 +26,39 @@
             <td>Seconds</td>
           </tr>
       </table>
+
     </div>
+    <script>function countdown() {
+      let now = new Date();
+      let evenDate = new Date(2022, 11, 25);
+    
+      let actualTime = now.getTime();
+      let eventTime = evenDate.getTime();
+      let remTime = eventTime - actualTime;
+    
+      let s = Math.floor(remTime / 1000);
+      let m = Math.floor(s / 60);
+      let h = Math.floor(m / 60);
+      let d = Math.floor(h / 24);
+    
+      h %= 24;
+      m %= 60;
+      s %= 60;
+    
+      h = h < 10 ? '0' + h : h;
+      m = m < 10 ? '0' + m : m;
+      s = s < 10 ? '0' + s : s;
+    
+      document.querySelector('#days').textContent = d;
+      document.querySelector('#hours').textContent = h;
+      document.querySelector('#minutes').textContent = m;
+      document.querySelector('#seconds').textContent = s;
+    
+      setTimeout(countdown, 1000)
+    
+    
+    };
+    
+    countdown();</script>
 </body>
 </html>
